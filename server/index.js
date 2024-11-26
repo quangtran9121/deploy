@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
 
 app.use(cookieParser());
 const corsOptions = {
-  origin: 'http://localhost:3000', // Địa chỉ client
+  origin: 'http://localhost:9121', // Địa chỉ client
   credentials: true, // Cho phép gửi cookie
 };
 app.use(cors(corsOptions));
