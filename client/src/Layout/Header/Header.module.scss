@@ -1,0 +1,366 @@
+// Colors (có thể tùy chỉnh theo palette của bạn)
+$primary-color: #3b21cc ;
+$success-color: #28a745;
+$background-color: #FFFFFF;
+$text-color: #333;
+
+.header {
+    display: flex;
+    max-width: 1535px;
+    margin: 0 auto;    /* Căn giữa container để giữ hai lề cố định */
+    // padding: 0 20px;
+    // justify-content: space-between;
+    // align-items: center;
+    padding: 20px 20px;
+    padding-right: 90px;
+    background-color: $background-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .header-left {
+        flex: 0 0 auto; // Không co dãn
+    }
+
+    .header-right {
+        flex: 0 0 auto; // Không co dãn
+        display: flex;
+        align-items: center;}
+
+    .logo img {
+        margin-left: 25px;
+        max-width: 150px;
+        
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Đẩy các mục menu về bên phải */
+        flex-grow: 1; /* Để phần menu mở rộng chiếm phần còn lại */
+      }
+      
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin-top: 15px;
+        // padding: 0;
+        justify-content: flex-end;
+
+        .nav-item {
+            margin: 0px 20px;
+            margin-right: 45px;
+            font-size: 17px;
+            .nav-link {
+                text-decoration: none;
+                color: $text-color;
+                font-weight: bold;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+
+        .btn {
+            margin-left: 10px;
+            padding: 13px 35px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &.login-btn {
+                background-color: $primary-color;
+                font-weight: bold;
+                color: white;
+            }
+
+            &.signup-btn {
+                background-color: $success-color;
+                color: white;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    .user {
+        color: #3b21cc;
+        border-radius: 15px;
+        font-size: 25px;
+        margin-left: 30px;
+        &:hover {
+            color: #000000; // Change color on hover
+        }
+        display: flex;
+    }
+    .auth-popup {
+        position: fixed;
+        padding: 350px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      
+        .auth-popup-overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: transparent;
+        }
+      
+        .auth-popup-content {
+        //   background-color: white;
+          padding: 30px;
+          
+          border-radius: 10px;
+          position: relative;
+          z-index: 1001;
+          width: 400px;
+          max-width: 100%;
+        }
+      
+        .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: white;
+          background-color: #3b21cc;
+          border-radius: 10px;
+          border: none;
+          font-size: 15px;
+          cursor: pointer;
+        }
+      }
+      
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3b21cc;
+    border-radius: 15px;
+    padding: 5px;
+    margin-right: 10px;
+    width: 50px;  // Kích thước ban đầu
+    transition: width 0.3s ease;  // Hiệu ứng mở rộng
+    overflow: hidden;  // Ẩn phần input bị che khuất
+    justify-content: flex-end;  // Giữ icon nút bấm cố định bên phải
+    position: relative;  // Đảm bảo giữ cố định phần bên phải
+
+    &:focus-within {
+        width: 300px;  // Kích thước khi được click
+    }
+
+    .search-input {
+        border: none;
+        outline: none;
+        // background-color: #F8F8F8;
+        width: 0;  // Input ban đầu bị ẩn
+        padding: 5px 10px;
+        font-size: 15px;
+        transition: width 0.3s ease;  // Hiệu ứng mở rộng input khi focus
+        opacity: 0;  // Ẩn input ban đầu
+        transition: opacity 0.3s ease, width 0.3s ease; 
+
+        &::placeholder {
+            color: #aaa;
+        }
+    }
+
+    &:focus-within .search-input {
+        width: 100%;  // Mở rộng input khi focus
+        opacity: 1;  // Hiển thị input
+    }
+
+    .search-button {
+        display: flex;
+        // justify-content: center;
+        background: none;
+        color: $primary-color;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        font-size: large;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start; /* Aligns items to the start (left) */
+    // width: 100%; /* Adjust as needed */
+}
+
+.search-results {
+    position: absolute; /* Định vị cố định để hiển thị đè lên các phần tử khác */
+    top: 90px; /* Điều chỉnh vị trí dọc để nằm dưới header */
+    left: 76.2%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+    width: 300px; /* Độ rộng của kết quả tìm kiếm */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000; /* Đảm bảo phần tử nằm trên các phần tử khác */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.search-result-item {
+    display: flex;
+    // align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #f9f9f9;
+    }
+}
+
+.game-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    .game-developer {
+        font-size: 12px;
+        font-weight: bold;
+        color: #666;
+        margin: 0;
+    }
+
+    .game-title {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.header-right {
+    // display: flex;
+    .user{
+        margin-right: 9px;
+    }
+    .btn {
+        margin-left: 32.5px;
+        padding: 10px 25px;
+        border: none;
+        // margin-right: 80px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        text-align: right;
+
+        &.logout-btn {
+            background-color: #de0000;
+            font-weight: bold;
+            color: white;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .hamburger-menu {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 5000; // Đảm bảo nút hamburger nằm trên overlay
+    }
+
+    .nav {
+        &-list {
+            display: flex;
+        }
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        text-align: right;
+        transition: transform 0.3s ease, right 0.3s ease;
+        // background: #1a1934; // Màu nền menu
+        color: white;
+        z-index: 1000; // Nằm trên overlay
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+
+    
+        ul {
+            list-style: none;
+            padding: 0;
+    
+            li {
+                margin: 20px 0;
+    
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 21px;
+                    font-weight: bold;
+    
+                    &:hover {
+                        color: #3b21cc;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* Khi màn hình nhỏ hơn 400px */
+    @media (max-width: 1023px) {
+        .nav {
+            display: none; /* Ẩn menu chính */
+        }
+
+        .hamburger-menu {
+            display: block; /* Hiển thị nút ba gạch */
+        }
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 49, 93, 0.9); // Nền mờ
+    z-index: 999; // Nằm dưới menu
+    transition: opacity 0.3s ease;
+}

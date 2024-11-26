@@ -1,0 +1,99 @@
+.rating {
+    margin-bottom: 1rem;
+  
+    h3 {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: #333;
+  
+      .average-rating {
+        margin-left: 8px;
+        font-size: 1.1rem;
+        color: #ffc107; /* Màu vàng cho sao trung bình */
+  
+        .star {
+          font-size: 1.2rem;
+          margin-right: 4px;
+        }
+      }
+    }
+  
+    .stars {
+      font-size: 1.5rem;
+      margin-top: -12px;
+      color: #ddd;
+      cursor: pointer;
+  
+      .star {
+        transition: color 0.3s ease;
+  
+        &.selected {
+          color: #ffc107; /* Màu vàng cho sao được chọn */
+        }
+      }
+    }
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet: max-width 1024px */
+  @media (max-width: 1024px) {
+    .rating {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+      h3 {
+        font-size: 1.1rem;
+  
+        .average-rating {
+          font-size: 1rem;
+  
+          .star {
+            font-size: 1rem;
+          }
+        }
+      }
+  
+      .stars {
+        font-size: 1.4rem;
+  
+        .star {
+          padding: 0 5px; /* Tăng khoảng cách giữa các sao */
+        }
+      }
+    }
+  }
+  
+  /* Mobile: max-width 480px */
+  @media (max-width: 480px) {
+    .rating {
+      h3 {
+        font-size: 1rem; /* Giảm kích thước chữ trên thiết bị nhỏ */
+        flex-direction: column; /* Chuyển tiêu đề và đánh giá trung bình thành 2 dòng */
+        text-align: center;
+  
+        .average-rating {
+          margin-left: 0;
+          margin-top: 5px;
+          font-size: 0.9rem;
+  
+          .star {
+            font-size: 1rem;
+          }
+        }
+      }
+  
+      .stars {
+        font-size: 1.2rem; /* Giảm kích thước sao */
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+  
+        .star {
+          padding: 0 3px; /* Giảm khoảng cách giữa các sao */
+        }
+      }
+    }
+  }
+  

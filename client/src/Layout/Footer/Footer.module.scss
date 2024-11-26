@@ -1,0 +1,72 @@
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    max-width: 1535px;
+    margin: 0 auto;    /* Căn giữa container để giữ hai lề cố định */
+    // padding: 0 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+  }
+  
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .middleSection {
+    text-align: center;
+  }
+  
+  .address {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  .link {
+    color: #555;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .rightSection {
+    display: flex;
+    // position: relative;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .socialLink {
+    font-size: 30px;
+    position: relative;
+    top: -20px;
+    color: #0077b5; // LinkedIn blue color
+    text-decoration: none;
+    &:hover {
+      color: #005582;
+    }
+  }
+  

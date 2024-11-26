@@ -1,0 +1,141 @@
+.game-details-header {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+  
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+  
+      .share-button,
+      .open-button {
+        padding: 10px 20px;
+        border: 1px solid #4e4ac3;
+        color: #4e4ac3;
+        background-color: #ffffff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+  
+        &:hover {
+          background-color: #eaeaea;
+        }
+      }
+    }
+  
+    .details-content {
+      p {
+        font-size: 14px;
+        margin: 10px 0;
+      }
+  
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+  
+      .details-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        // margin- top: 15px;
+  
+        .details-items,
+        .details-item {
+          font-size: 14px;
+          margin-top: 30px;
+  
+          h2 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet: max-width 1024px */
+  @media (max-width: 1024px) {
+    .game-details-header {
+      margin-left: 20px;
+      max-width: 100%; /* Đảm bảo chiếm toàn bộ chiều ngang */
+  
+      .header-buttons {
+        flex-direction: column; /* Nút chuyển thành cột dọc */
+        gap: 5px;
+  
+        .share-button,
+        .open-button {
+          padding: 8px 15px; /* Giảm padding */
+          font-size: 13px; /* Giảm kích thước chữ */
+        }
+      }
+  
+      .details-content {
+        p {
+          font-size: 13px; /* Giảm kích thước chữ */
+        }
+  
+        h2 {
+          font-size: 18px; /* Giảm kích thước chữ tiêu đề */
+        }
+  
+        .details-row {
+          gap: 8px; /* Giảm khoảng cách giữa các mục */
+  
+          .details-items,
+          .details-item {
+            font-size: 13px; /* Giảm kích thước chữ */
+          }
+        }
+      }
+    }
+  }
+  
+  /* Mobile: max-width 480px */
+  @media (max-width: 480px) {
+    .game-details-header {
+      margin-left: 0;
+      padding: 10px;
+      max-width: 100%; /* Chiếm toàn bộ chiều ngang */
+  
+      .header-buttons {
+        flex-direction: column;
+        align-items: stretch; /* Nút kéo dài toàn bộ chiều ngang */
+        gap: 5px;
+  
+        .share-button,
+        .open-button {
+          width: 100%; /* Chiếm toàn bộ chiều ngang */
+          padding: 6px 10px;
+          font-size: 12px;
+        }
+      }
+  
+      .details-content {
+        p {
+          font-size: 12px; /* Giảm kích thước chữ */
+        }
+  
+        h2 {
+          font-size: 16px;
+          margin-bottom: 8px; /* Giảm khoảng cách dưới tiêu đề */
+        }
+  
+        .details-row {
+          gap: 5px;
+  
+          .details-items,
+          .details-item {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  

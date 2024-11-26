@@ -1,0 +1,127 @@
+.gameArea {
+    padding: 40px;
+    background-color: #f5f5f5;
+    text-align: center;
+    max-width: 1535px;
+    margin: 0 auto;    /* Căn giữa container để giữ hai lề cố định */
+    // padding: 0 20px;
+
+    .heading {
+        font-size: 32px;
+        font-weight: bold;
+        color: #3b21cc;
+        margin-bottom: 30px;
+    }
+
+    .gamesGrid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gameCard {
+        background-color: white;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .gameImage {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .gameTitle {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .gameDeveloper {
+            font-size: 14px;
+            color: #888;
+        }
+    }
+
+    .pagination {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .pageNumber {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b21cc;
+        }
+
+        .prevButton,
+        .nextButton {
+            background-color: #3b21cc;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+
+            &:hover {
+                background-color: #3729cc;
+            }
+        }
+    }
+    /* Responsive cho thiết bị iPhone 14 (390px x 844px) */
+  @media (max-width: 480px) {
+    padding: 10px;
+
+    .heading {
+      font-size: 20px;
+    }
+
+    .gamesGrid {
+      grid-template-columns: repeat(2, minmax(100px, 1fr));; /* Hiển thị mỗi game trên 1 dòng */
+      gap: 5px; /* Giảm khoảng cách */
+    }
+
+    .gameCard {
+      padding: 8px;   
+
+      .gameImage {
+        height: 100px; /* Giảm chiều cao ảnh */
+        object-fit: cover;
+        // width: 100PX;
+      }
+
+      .gameTitle {
+        font-size: 14px; /* Giảm kích thước chữ */
+      }
+
+      .gameDeveloper {
+        font-size: 12px;
+      }
+    }
+
+    .pagination {
+      display: flex; /* Chuyển sang hiển thị theo cột */
+      gap: 10px;
+
+      .prevButton,
+      .nextButton {
+        width: 10%; /* Nút rộng toàn màn hình */
+        font-size: 14px; /* Giảm kích thước chữ */
+      }
+
+      .pageNumber {
+        font-size: 14px;
+      }
+    }
+}
+}

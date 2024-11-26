@@ -1,0 +1,119 @@
+.similar-games {
+    margin-top: 3px;
+    background-color: #f6f6f6;
+  
+    h2 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      text-align: left;
+      color: #3b21cc;
+      font-weight: bold;
+    }
+  
+    .similar-games-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+  
+      .game-item {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+  
+        .game-image {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+          margin-bottom: 5px;
+        }
+  
+        .game-title {
+          font-size: 14px;
+          color: #333;
+          margin-bottom: 2px; /* Giảm khoảng cách phía dưới tiêu đề */
+        }
+  
+        .game-publisher {
+          font-size: 12px;
+          color: #777;
+          text-align: left;
+          margin-top: 0; /* Loại bỏ khoảng cách phía trên nếu có */
+        }
+      }
+    }
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet: max-width 1024px */
+  @media (max-width: 1024px) {
+    .similar-games {
+      margin-top: 20px;
+      padding: 10px;
+  
+      h2 {
+        font-size: 22px;
+        text-align: center; /* Căn giữa tiêu đề trên thiết bị nhỏ */
+      }
+  
+      .similar-games-list {
+        gap: 15px;
+  
+        .game-item {
+          width: 180px; /* Giảm kích thước item */
+          height: 180px;
+  
+          .game-image {
+            border-radius: 5px;
+          }
+  
+          .game-title {
+            font-size: 13px; /* Giảm kích thước chữ */
+          }
+  
+          .game-publisher {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Mobile: max-width 480px */
+  @media (max-width: 480px) {
+    .similar-games {
+      padding: 10px;
+  
+      h2 {
+        font-size: 20px;
+        text-align: center; /* Căn giữa tiêu đề */
+        margin-bottom: 10px;
+      }
+  
+      .similar-games-list {
+        flex-direction: column; /* Chuyển layout từ hàng ngang sang cột dọc */
+        align-items: center;
+        // gap: 5px; /* Giảm khoảng cách giữa các game */
+  
+        .game-item {
+          width: 100%; /* Chiếm toàn bộ chiều ngang */
+          max-width: 300px; /* Đặt chiều rộng tối đa */
+          height: auto;
+  
+          .game-image {
+            width: 100%; /* Tự điều chỉnh theo kích thước item */
+            max-height: 150px; /* Giới hạn chiều cao ảnh */
+          }
+  
+          .game-title {
+            font-size: 14px;
+          }
+  
+          .game-publisher {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  

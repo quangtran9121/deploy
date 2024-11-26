@@ -1,0 +1,67 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    max-width: 1535px;
+    margin: 0 auto;    /* Căn giữa container để giữ hai lề cố định */
+    // padding: 0 5px;
+    .textSection {
+        flex: 1;
+        display: flex;  
+        flex-direction: column;  
+        justify-content: center;  
+        align-items: center; 
+
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #3b21cc;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-top: 10px;
+            // font-weight: bold;
+            color: #5c5d6e;
+        }
+
+        .ctaButton {
+            display: flex;
+            margin-top: 30px;
+            font-weight: bold;
+            padding: 12px 24px;
+            background-color:  #fff;
+            color: #3b21cc;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            span {
+                font-size: 20px;
+            }
+
+            &:hover {
+                background-color: #e5e7eb;
+            }
+        }
+    }
+
+    .imageSection {
+        flex: 1;
+        text-align: center;
+        object-fit: cover;
+
+        .bannerImage {
+            max-width: 100%;
+            height: 250px;
+        }
+    }
+}

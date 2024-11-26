@@ -1,0 +1,40 @@
+.user-profile-page {
+    display: flex;
+    max-width: 1535px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+
+    .left-column {
+        flex: 1; // 1 part of the width
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right-column {
+        flex: 2; // 2 parts of the width
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .post-game-button-container {
+        text-align: center;
+
+        .post-game-button {
+            background-color: #4e4ac3;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #3d3a9f;
+            }
+        }
+    }
+}

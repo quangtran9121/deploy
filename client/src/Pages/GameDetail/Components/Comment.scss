@@ -1,0 +1,102 @@
+.comment-section {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    // max-height:500px;
+}
+.comment-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+
+    h4 {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+
+    .comments-list {
+        .comment {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #e4e6eb;
+            border-radius: 20px;
+            max-width: 100%;
+            word-wrap: break-word;
+
+            .user-avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 10px;
+                object-fit: cover;
+            }
+
+            p {
+                margin: 0;
+                font-size: 0.95em;
+                
+                strong {
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 3px;
+                    font-size: 0.9em;
+                }
+
+                color: #333;
+            }
+        }
+    }
+
+    .comment-input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            resize: none;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        button {
+            align-self: flex-end;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4a90e2;
+            color: white;
+            cursor: pointer;
+            font-size: 0.9em;
+
+            &:hover {
+                background-color: #357ab8;
+            }
+        }
+    }
+}
+
+.comment-section {
+    .comments-list {
+        .load-more-btn {
+            margin: 10px auto;
+            display: block;
+            padding: 8px 16px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+
+            &:hover {
+                background-color: #357ab8;
+            }
+        }
+    }
+}

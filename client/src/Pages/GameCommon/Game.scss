@@ -1,0 +1,118 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  max-height: 4100px;
+  max-width: 1535px;
+  margin: 0 auto;
+  background-color: #F6F6F6;
+
+  .header, .footer {
+      width: 100%;
+  }
+
+  .main {
+      display: flex;
+      flex: 1;
+    //   padding: 30px 70px;
+  }
+
+  .sidebar {
+      flex: 1;
+      max-width: 250px;
+      padding: 20px;
+      background-color: #F6F6F6;
+      border-right: 1px solid #eaeaea;
+
+      &.open {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 250px;
+          background: #fff;
+          z-index: 1000;
+          transform: translateX(0); // Hiển thị menu
+          transition: transform 0.3s ease-in-out;
+      }
+
+      // Ẩn Filter trên màn hình nhỏ
+      @media (max-width: 1024px) {
+          position: fixed;
+          top: 0;
+          left: -100%; // Ẩn Filter ngoài màn hình
+          height: 100%;
+          width: 250px;
+          z-index: 1000;
+          background: #fff;
+          transform: translateX(-100%); // Dịch sang trái
+          transition: transform 0.3s ease-in-out;
+      }
+  }
+
+  .sidebar-overlay {
+      display: none; // Không hiển thị trên màn hình lớn
+      @media (max-width: 1024px) {
+          display: block; // Hiển thị khi màn hình nhỏ
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5); // Màu nền mờ
+          z-index: 999;
+      }
+  }
+
+  .content {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+      .controls {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+
+          .title {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              .hamburger-menu {
+                  display: none; // Ẩn hamburger menu trên màn hình lớn
+                  background: none;
+                  border: none;
+                  font-size: 24px;
+                  cursor: pointer;
+                  color: #3B21CC;
+
+                  @media (max-width: 1024px) {
+                      display: block;
+                  }
+              }
+
+              font-size: 24px;
+              font-weight: bold;
+              color: #3B21CC;
+          }
+
+          .search-sort {
+              display: flex;
+              gap: 10px;
+          }
+      }
+
+      .featured-games-carousel {
+          margin-bottom: 20px;
+      }
+  }
+
+  .no-results {
+      text-align: center;
+      font-size: 18px;
+      color: #3B21CC;
+      margin-top: 20px;
+  }
+}

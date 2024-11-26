@@ -1,0 +1,23 @@
+.search {
+  input {
+    padding: 8px;
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #3b21cc;
+
+    &::placeholder {
+      color: #3b21cc;
+      font-weight: bold;
+    }
+  }
+
+  /* Responsive: Khi màn hình nhỏ hơn 1200px */
+  @media (max-width: 1200px) {
+    input {
+      width: 150px; /* Thu nhỏ chiều rộng */
+      padding: 6px; /* Giảm padding */
+      font-size: 14px; /* Giảm kích thước chữ */
+    }
+  }
+}

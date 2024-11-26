@@ -1,0 +1,29 @@
+.sort {
+  select {
+    padding: 8px;
+    width: 250px;
+    border: 1.5px solid #614CD5;
+    border-radius: 20px;
+    color: #3b21cc;
+    margin-right: 25px;
+    font-weight: bold;
+  }
+
+  select option:disabled {
+    color: #3b21cc; /* Màu cho "Sort By" */
+  }
+
+  select option {
+    color: black;
+  }
+
+  /* Responsive: Khi màn hình nhỏ hơn 1200px */
+  @media (max-width: 1200px) {
+    select {
+      width: 100px; /* Thu nhỏ chiều rộng */
+      padding: 6px; /* Giảm padding */
+      font-size: 14px; /* Giảm kích thước chữ */
+      margin-right: 15px; /* Giảm khoảng cách bên phải */
+    }
+  }
+}
