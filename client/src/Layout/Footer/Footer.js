@@ -23,7 +23,7 @@ const Footer = () => {
             <span className={styles.icon}>
               <i className="fas fa-map-marker-alt"></i>
             </span>
-            The Nine, No. 9 Pham Van Dong, Mai Dich, Cau Giay, Hanoi - Check CI/CD
+            The Nine, No. 9 Pham Van Dong, Mai Dich, Cau Giay, Hanoi
           </p>
           <p className={styles.copyright}>
             Azerion Copyright 2017 - 2023 |{" "}

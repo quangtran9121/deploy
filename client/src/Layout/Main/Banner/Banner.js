@@ -7,7 +7,7 @@ function Banner() {
         <div className={styles.banner}>
             <div className={styles.textSection}>
                 <h1 className={styles.title}>
-                    High-Yield Solutions <br /> For Quang phải được - Publishers
+                    High-Yield Solutions <br /> For Publishers
                 </h1>
                 <p className={styles.subtitle}>
                     Discover the advantages of<br /> partnering with GameDistribution
