@@ -98,7 +98,7 @@ function HeaderAdmin() {
                                     <Link to={`/games/${game.slug}`} key={index} className="game-item-link">
                                         <li key={index} className={cx('search-result-item')}>
                                             <img
-                                                src={`http://backend:5000/uploads/${game.img}`}
+                                                src={`http://45.77.32.24:5000/uploads/${game.img}`}
                                                 loading="lazy"
                                                 alt={game.game_name}
                                                 className={cx('game-thumbnail')}

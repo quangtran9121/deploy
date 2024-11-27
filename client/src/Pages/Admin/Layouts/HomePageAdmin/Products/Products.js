@@ -55,7 +55,7 @@ function Products({
                                         <img
                                             style={{ width: '120px' }}
                                             loading="lazy"
-                                            src={`http://backend:5000/uploads/${item.img}`}
+                                            src={`http://45.77.32.24:5000/uploads/${item.img}`}
                                             alt="."
                                         />
                                     </td>

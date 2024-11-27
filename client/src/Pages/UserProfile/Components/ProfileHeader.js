@@ -18,7 +18,7 @@ function ProfileHeader({ user, onAvatarChange }) {
     return (
         <div className="profile-header">
             <img 
-                src={`http://backend:5000/uploads/${user.avatar}`} 
+                src={`http://45.77.32.24:5000/uploads/${user.avatar}`} 
                 alt={`${user.lastName}'s avatar`} 
                 className="avatar" 
                 onClick={handleAvatarClick}

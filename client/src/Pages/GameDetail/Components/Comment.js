@@ -60,7 +60,7 @@ function CommentSection({ slug, userEmail }) {
                 {comments.length > 0 ? (
                     comments.slice(0, visibleComments).map((comment, index) => (
                         <div key={index} className="comment">
-                            <img src={`http://backend:5000/uploads/${comment.user.avatar || 'default-avatar.png'}`} alt="User Avatar" className="user-avatar" />
+                            <img src={`http://45.77.32.24:5000/uploads/${comment.user.avatar || 'default-avatar.png'}`} alt="User Avatar" className="user-avatar" />
                             <p><strong>{comment.user.firstName} {comment.user.lastName}</strong> {comment.commentText}</p>
                         </div>
                     ))

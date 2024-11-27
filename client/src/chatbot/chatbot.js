@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 
 // Kết nối với server WebSocket
-const socket = io("http://backend:5000");
+const socket = io("http://45.77.32.24:5000");
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);

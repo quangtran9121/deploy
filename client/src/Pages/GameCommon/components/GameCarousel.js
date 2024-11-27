@@ -30,7 +30,7 @@ function GameCarousel({ games }) {
           <Link to={`/games/${game.slug}`} key={index} className="game-item-link">
             <div className="game-item">
               <img
-                src={`http://backend:5000/uploads/${game.img}`}
+                src={`http://45.77.32.24:5000/uploads/${game.img}`}
                 loading="lazy"
                 alt={game.title}
                 className="game-image"
