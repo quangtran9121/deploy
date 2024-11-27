@@ -12,7 +12,7 @@ function GameStatistics({ games }) {
                     <div key={index} className="game-items">
                     <Link to={`/games/${game.slug}`} className="game-item-link">
                         <img
-                            src={`http://localhost:5000/uploads/${game.img}`}
+                            src={`http://backend:5000/uploads/${game.img}`}
                             loading="lazy"
                             alt={game.title}
                             className="game-image"

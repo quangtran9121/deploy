@@ -23,7 +23,7 @@ function MyGames({ games, setShowEditModal, setShowDeleteModal, setSelectedGame 
                     <div key={index} className="game-item">
                         <Link to={`/games/${game.slug}`} className="game-item-link">
                             <img
-                                src={`http://localhost:5000/uploads/${game.img}`}
+                                src={`http://backend:5000/uploads/${game.img}`}
                                 alt={game.title}
                                 loading="lazy"
                                 className="game-image"

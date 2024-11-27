@@ -18,7 +18,7 @@ function Dashboard() {
             <header className={cx('header-page-admin')}>
                 <div className={cx('img-admin')}>
                     <img
-                        src={`http://localhost:5000/uploads/${dataUser.dataUser?.avatar}`}
+                        src={`http://backend:5000/uploads/${dataUser.dataUser?.avatar}`}
                         loading="lazy"
                         alt=""
                     />

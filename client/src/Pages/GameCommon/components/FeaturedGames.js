@@ -65,7 +65,7 @@ function FeaturedGames() {
                             <div className="category-games">
                                 <div className="featured-game-card">
                                     <img
-                                        src={`http://localhost:5000/uploads/${category.games[currentIndexes[categoryIndex]]?.img || 'placeholder.jpg'}`}
+                                        src={`http://backend:5000/uploads/${category.games[currentIndexes[categoryIndex]]?.img || 'placeholder.jpg'}`}
                                         loading="lazy"
                                         alt=""
                                         className="featured-game-image"

@@ -38,7 +38,7 @@ function SimilarGames({ currentGenres, currentSlug }) {
                     similarGames.map((game, index) => (
                         <Link to={`/games/${game.slug}`} key={index} className="game-item-link">
                         <div key={index} className="game-item">
-                            <img src={`http://localhost:5000/uploads/${game.img}`} loading="lazy" alt={game.title} className="game-image" />
+                            <img src={`http://backend:5000/uploads/${game.img}`} loading="lazy" alt={game.title} className="game-image" />
                             <p className="game-title">{game.game_name}</p>
                             <p className="game-publisher">{game.developer}</p>
                         </div>

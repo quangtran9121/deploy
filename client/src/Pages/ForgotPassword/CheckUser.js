@@ -49,7 +49,7 @@ function ResetPasswordOption() {
                 {/* Hiển thị thông tin người dùng */}
                 <div className="user-info">
                     {avatar && (
-                        <img src={`http://localhost:5000/uploads/${avatar}`} loading="lazy" alt="User Avatar" className="user-avatar" />
+                        <img src={`http://backend:5000/uploads/${avatar}`} loading="lazy" alt="User Avatar" className="user-avatar" />
                     )}
                     <p><strong>Email:</strong> {email}</p>
                 </div>
