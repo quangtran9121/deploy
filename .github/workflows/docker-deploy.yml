@@ -52,8 +52,14 @@ jobs:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST <<EOF
-          docker pull your-dockerhub-username/backend:latest
-          docker pull your-dockerhub-username/frontend:latest
+          docker pull quangtt91/backend:latest
+          docker pull quangtt91/frontend:latest
           docker-compose down
           docker-compose up -d
+          EOF
+      # Bước 8: Kiểm tra container đã chạy chưa
+      - name: Check container status
+        run: |
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST <<EOF
+          docker ps
           EOF
