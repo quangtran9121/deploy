@@ -8,9 +8,9 @@ services:
       - "9121:80"
     depends_on:
       - backend
-    # volumes:
-    #   - ./client:/app # Đồng bộ mã nguồn từ ./client vào thư mục /app trong container
-    #   - /app/node_modules # Tránh ghi đè node_modules trong container
+    volumes:
+      - ./client:/app # Đồng bộ mã nguồn từ ./client vào thư mục /app trong container
+      - /app/node_modules # Tránh ghi đè node_modules trong container
     # environment:
     #   - CHOKIDAR_USEPOLLING=true # Kích hoạt hot reload
 
@@ -20,9 +20,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./uploads:/uploads # Bind mount thư mục uploads từ máy host vào container
-    # volumes:
-    #   - ./backend:/app # Đồng bộ mã nguồn từ ./backend vào /app
-    #   - /app/node_modules
+      - ./backend:/app # Đồng bộ mã nguồn từ ./backend vào /app
+      - /app/node_modules
     ports:
       - "5000:5000"
     environment:
