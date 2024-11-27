@@ -55,7 +55,7 @@ jobs:
           # In ra đường dẫn thư mục hiện tại
           pwd
           # Chuyển đến thư mục chứa docker-compose.yml
-          cd /home/quangtt/deploy
+          cd /var/www/project2/deploy
           # Kiểm tra lại đường dẫn
           pwd
           docker pull quangtt91/backend:latest
