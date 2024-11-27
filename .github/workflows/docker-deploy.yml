@@ -52,6 +52,12 @@ jobs:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST <<EOF
+          # In ra đường dẫn thư mục hiện tại
+          pwd
+          # Chuyển đến thư mục chứa docker-compose.yml
+          cd /home/quangtt/deploy
+          # Kiểm tra lại đường dẫn
+          pwd
           docker pull quangtt91/backend:latest
           docker pull quangtt91/frontend:latest
           docker-compose down
