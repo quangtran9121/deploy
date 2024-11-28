@@ -44,18 +44,12 @@ io.on("connection", (socket) => {
 });
 
 app.use(cookieParser());
-app.use(cors({
-  origin: ['http://fe2.backendintern.online', 'http://quangtt.backendintern.online'],
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+const corsOptions = {
+  origin: 'http://fe2.backendintern.online', // Địa chỉ client
+  credentials: true, // Cho phép gửi cookie
+};
 
-// const corsOptions = {
-//   origin: 'http://fe2.backendintern.online', // Địa chỉ client
-//   credentials: true, // Cho phép gửi cookie
-// };
-
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 
 // Middleware cho session
