@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
 
 app.use(cookieParser());
 const corsOptions = {
-  origin: 'http://45.77.32.24:9121', // Địa chỉ client
+  origin: 'http://fe2.backendintern.online', // Địa chỉ client
   credentials: true, // Cho phép gửi cookie
 };
 app.use(cors(corsOptions));
