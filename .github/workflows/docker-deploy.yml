@@ -24,7 +24,7 @@ jobs:
       # Bước 3: Build Docker images cho backend
       - name: Build backend Docker image
         run: |
-          docker build --no-cache -t quangtt91/backend:latest ./server
+          docker build --no-cache -t quangtt91/backend:check ./server
 
       # Bước 4: Build Docker images cho frontend
       - name: Build frontend Docker image
