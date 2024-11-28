@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const request = axios.create({
     withCredentials: true,
-    baseURL: 'http://45.77.32.24:5000',
+    baseURL: 'http://quangtt.backendintern.online',
 });
 
 export default request;
