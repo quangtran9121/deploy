@@ -54,7 +54,7 @@ FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Copy file cấu hình nginx tùy chỉnh (nếu có)
-COPY nginx.conf /etc/nginx/conf.d/project2.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose cổng 80
 EXPOSE 80
