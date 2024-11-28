@@ -34,7 +34,7 @@ jobs:
       # Bước 5: Push Docker images lên Docker Hub
       - name: Push backend image
         run: |
-          docker push quangtt91/backend:latest
+          docker push quangtt91/backend:check
 
       - name: Push frontend image
         run: |
@@ -77,7 +77,7 @@ jobs:
           fi
 
           # Kéo image mới từ Docker Hub
-          docker pull quangtt91/backend:latest
+          docker pull quangtt91/backend:check
           docker pull quangtt91/frontend:latest
           # Dừng các container hiện tại
           docker-compose down
