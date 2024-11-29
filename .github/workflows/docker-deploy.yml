@@ -64,6 +64,10 @@ jobs:
           # Chuyển đến thư mục chứa docker-compose.yml
           cd /var/www/project2/deploy
 
+          # Đồng bộ code mới nhất từ GitHub (pull code)
+          echo "Pulling latest code from GitHub..."
+          git pull origin
+
           # Kiểm tra lại đường dẫn
           echo "After changing directory:"
           pwd
