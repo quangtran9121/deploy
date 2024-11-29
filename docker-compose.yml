@@ -22,6 +22,6 @@ services:
       - /etc/letsencrypt:/etc/letsencrypt:ro # Mount chứng chỉ vào container
     ports:
       - "5000:5000"
-      - "443:443"
+      - "8443:443"
     environment:
       - NODE_ENV=production
