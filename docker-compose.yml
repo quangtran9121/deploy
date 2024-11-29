@@ -9,6 +9,7 @@ services:
     volumes:
       - ./client:/app # Đồng bộ mã nguồn từ ./client vào thư mục /app trong container
       - /app/node_modules # Tránh ghi đè node_modules trong container
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     # environment:
     #   - CHOKIDAR_USEPOLLING=true # Kích hoạt hot reload
 
@@ -18,7 +19,9 @@ services:
       - ./uploads:/uploads # Bind mount thư mục uploads từ máy host vào container
       - ./server:/app # Đồng bộ mã nguồn từ ./backend vào /app
       - /app/node_modules
+      - /etc/letsencrypt:/etc/letsencrypt:ro # Mount chứng chỉ vào container
     ports:
       - "5000:5000"
+      - "443:443"
     environment:
       - NODE_ENV=production
