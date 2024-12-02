@@ -45,25 +45,25 @@ io.on("connection", (socket) => {
 });
 
 app.use(cookieParser());
-// const corsOptions = {
-//   origin: 'http://fe2.backendintern.online', // Địa chỉ client
-//   credentials: true, // Cho phép gửi cookie
-// };
+const corsOptions = {
+  origin: 'https://fe2.backendintern.online', // Địa chỉ client
+  credentials: true, // Cho phép gửi cookie
+};
 
-// app.use(cors(corsOptions));
-const allowedOrigins = ['https://fe2.backendintern.online', 'https://45.77.32.24:9121'];
+app.use(cors(corsOptions));
+// const allowedOrigins = ['https://fe2.backendintern.online'];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: '*',
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+// app.use(cors({
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   methods: '*',
+//   allowedHeaders: ['Content-Type', 'Authorization']
+// }));
 
 
 // Middleware cho session
