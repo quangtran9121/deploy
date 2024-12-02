@@ -74,7 +74,7 @@ class UserController{
             const publisher = dataUser.isPublisher;
             const developer = dataUser.isDeveloper;
             const token = jwt.sign({email, admin, publisher, developer}, jwtSecret, {expiresIn: '24h'});
-            res.setHeader('Set-Cookie',`Token=${token}; Secure; max-age=18000; path=/`).json({
+            res.setHeader('Set-Cookie',`Token=${token}; SameSite=None; Secure; max-age=18000; path=/`).json({
                 message:'Đăng nhập thành công!'  
             })
 
