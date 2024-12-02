@@ -16,7 +16,7 @@ import logoGG from './unnamed.png'
 
 const Auth = ({onClose}) => {
   //XỬ LÝ ĐĂNG NHẬP
-  console.log('aaa')
+  console.log('aaaaaaaa')
   var [isLogin, setIsLogin] = useState(true);
   var [email, setEmail] = useState('');
   var [password, setPassword] = useState(''); 
