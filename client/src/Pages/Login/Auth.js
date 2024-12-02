@@ -52,7 +52,7 @@ const Auth = ({onClose}) => {
           console.log("Login successful");
         }
       } catch (error) {
-        toast.error(error.response.data.message);
+        toast.error(error);
       }
       
     }
