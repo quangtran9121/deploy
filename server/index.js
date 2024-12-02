@@ -51,7 +51,7 @@ app.use(cookieParser());
 // };
 
 // app.use(cors(corsOptions));
-const allowedOrigins = ['http://fe2.backendintern.online', 'http://45.77.32.24:9121'];
+const allowedOrigins = ['https://fe2.backendintern.online', 'https://45.77.32.24:9121'];
 
 app.use(cors({
   origin: function (origin, callback) {
