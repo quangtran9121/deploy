@@ -18,31 +18,31 @@ const { Server } = require("socket.io");
 const http = require("http")
 const { handleChatMessage } = require('./Controllers/chatbot/ControllerChatbot.js')
 
-const server = http.createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "*", // Cho phép tất cả client kết nối
-    methods: ["GET", "POST"],
-  },
-})
-// Sử dụng Socket.IO để giao tiếp
-io.on("connection", (socket) => {
-  console.log("User connected:", socket.id);
+// const server = http.createServer(app);
+// const io = new Server(server, {
+//   cors: {
+//     origin: "*", // Cho phép tất cả client kết nối
+//     methods: ["GET", "POST"],
+//   },
+// })
+// // Sử dụng Socket.IO để giao tiếp
+// io.on("connection", (socket) => {
+//   console.log("User connected:", socket.id);
 
-  socket.on("sendMessage", async (message) => {
-    console.log("Message received:", message);
+//   socket.on("sendMessage", async (message) => {
+//     console.log("Message received:", message);
 
-    // Sử dụng module chatbot để xử lý
-    const botReply = await handleChatMessage(message);
+//     // Sử dụng module chatbot để xử lý
+//     const botReply = await handleChatMessage(message);
 
-    // Gửi phản hồi đến client
-    socket.emit("botReply", botReply);
-  });
+//     // Gửi phản hồi đến client
+//     socket.emit("botReply", botReply);
+//   });
 
-  socket.on("disconnect", () => {
-    console.log("User disconnected:", socket.id);
-  });
-});
+//   socket.on("disconnect", () => {
+//     console.log("User disconnected:", socket.id);
+//   });
+// });
 
 app.use(cookieParser());
 const corsOptions = {
