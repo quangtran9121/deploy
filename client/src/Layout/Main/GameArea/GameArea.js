@@ -48,7 +48,7 @@ const GameArea = () => {
                 {currentGames.map((game, index) => (
                     <Link to={`/games/${game.slug}`} key={index} className="game-item-link">
                     <div key={index} className={styles.gameCard}>
-                        <img src={`http://45.77.32.24:5000/uploads/${game.img}`} loading="lazy" alt={game.title} className={styles.gameImage} />
+                        <img src={`https://quangtt.backendintern.online/uploads/${game.img}`} loading="lazy" alt={game.title} className={styles.gameImage} />
                         <h3 className={styles.gameTitle}>{game.title}</h3>
                         <p className={styles.gameDeveloper}>{game.developer}</p>
                     </div>

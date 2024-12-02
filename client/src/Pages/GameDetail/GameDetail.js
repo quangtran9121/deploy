@@ -79,7 +79,7 @@ function GameDetail() {
                 <div className="left-column">
                     <div className="main-content">
                         <div className="game-header">
-                            <img src={`http://45.77.32.24:5000/uploads/${game.img}`} loading="lazy" alt="Game Icon" className="game-icon" />
+                            <img src={`https://quangtt.backendintern.online/uploads/${game.img}`} loading="lazy" alt="Game Icon" className="game-icon" />
                             <h1>{game.game_name}</h1>
                             <p className="game-publisher">by {game.publisher}</p>
                             <button className="play-button" onClick={handlePlayNow}>Play Now</button>

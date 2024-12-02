@@ -65,7 +65,7 @@ function FeaturedGames() {
                             <div className="category-games">
                                 <div className="featured-game-card">
                                     <img
-                                        src={`http://45.77.32.24:5000/uploads/${category.games[currentIndexes[categoryIndex]]?.img || 'placeholder.jpg'}`}
+                                        src={`https://quangtt.backendintern.online/uploads/${category.games[currentIndexes[categoryIndex]]?.img || 'placeholder.jpg'}`}
                                         loading="lazy"
                                         alt=""
                                         className="featured-game-image"
