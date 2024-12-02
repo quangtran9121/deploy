@@ -16,6 +16,7 @@ function Header() {
     const [searchResults, setSearchResults] = useState([]);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const token = document.cookie;
+    console.log(token);
     const navigate = useNavigate();
 
     const handleOpenAuth = () => {
