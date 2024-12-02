@@ -24,7 +24,7 @@ jobs:
       # Bước 3: Build Docker images cho backend
       - name: Build backend Docker image
         run: |
-          docker build --no-cache -t quangtt91/backend:https ./server
+          docker build --no-cache -t quangtt91/backend:http ./server
 
       # Bước 4: Build Docker images cho frontend
       - name: Build frontend Docker image
@@ -34,7 +34,7 @@ jobs:
       # Bước 5: Push Docker images lên Docker Hub
       - name: Push backend image
         run: |
-          docker push quangtt91/backend:https
+          docker push quangtt91/backend:http
 
       - name: Push frontend image
         run: |
@@ -81,7 +81,7 @@ jobs:
           fi
 
           # Kéo image mới từ Docker Hub
-          docker pull quangtt91/backend:https
+          docker pull quangtt91/backend:http
           docker pull quangtt91/frontend:latest
           # Dừng các container hiện tại
           docker-compose down

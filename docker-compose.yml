@@ -14,7 +14,7 @@ services:
     #   - CHOKIDAR_USEPOLLING=true # Kích hoạt hot reload
 
   backend:
-    image: quangtt91/backend:https # Sử dụng image đã được build và push lên Docker Hub
+    image: quangtt91/backend:http # Sử dụng image đã được build và push lên Docker Hub
     volumes:
       - ./uploads:/uploads # Bind mount thư mục uploads từ máy host vào container
       - ./server:/app # Đồng bộ mã nguồn từ ./backend vào /app
